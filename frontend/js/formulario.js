@@ -12,7 +12,7 @@ window.onload = () => {
     let $agregar = qs(".botonAgregar");
     let $borrar = qs(".botonBorrar");
 
-    let id = prompt("Para editar una película, ingrese el ID. De lo contrario, cancele y cree una nueva película.");
+    let id = prompt("Ingrese el id de pelicula");
 
     if (id) {
         fetch(`http://localhost:3031/api/movies/${id}`)
@@ -30,7 +30,7 @@ window.onload = () => {
             })
             .catch((error) => {
                 console.log(error);
-                alert("Error al obtener los datos de la película");
+                alert("Ocurrió un error");
             });
     }
 
@@ -59,7 +59,7 @@ window.onload = () => {
             })
             .catch((error) => {
                 console.log(error);
-                alert("Error al modificar la película");
+                alert("Ocurrió un error");
             });
     });
 
@@ -91,7 +91,7 @@ window.onload = () => {
             })
             .catch((error) => {
                 console.log(error);
-                alert("Error al crear la película");
+                alert("Ocurrió un error");
             });
     });
 

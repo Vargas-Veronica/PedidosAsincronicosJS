@@ -18,14 +18,14 @@ window.onload = () => {
         const h1 = document.createElement("h1");
         h1.textContent = movie.title;
 
-        const starIcon = document.createElement("i");
-        starIcon.setAttribute("class", "fa-regular fa-star");
-        starIcon.setAttribute("data-movieID", movie.id)
+        const star = document.createElement("i");
+        star.setAttribute("class", "fa-regular fa-star");
+        star.setAttribute("data-movieID", movie.id)
 
-        h1.appendChild(starIcon);
+        h1.appendChild(star);
 
-        starIcon.addEventListener("click", () => {
-          const movieId = starIcon.getAttribute("data-movieID");
+        star.addEventListener("click", () => {
+          const movieId = star.getAttribute("data-movieID");
           const movieTitle = movie.title;
           const movieRating = movie.rating;
           const movieLength = movie.length;
@@ -50,10 +50,10 @@ window.onload = () => {
 
           if (movieIndex === -1) {
             favoriteMovies.push(favoriteMovie);
-            starIcon.classList.add("star-selected");
+            star.classList.add("star-selected");
           } else {
             favoriteMovies.splice(movieIndex, 1);
-            starIcon.classList.remove("star-selected");
+            star.classList.remove("star-selected");
           }
 
           localStorage.setItem("favoriteMovies", JSON.stringify(favoriteMovies));

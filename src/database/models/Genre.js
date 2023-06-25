@@ -9,8 +9,8 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             autoIncrement: true
         },
-        // created_at: dataTypes.TIMESTAMP,
-        // updated_at: dataTypes.TIMESTAMP,
+         //created_at: dataTypes.TIMESTAMP,
+         //updated_at: dataTypes.TIMESTAMP,
         name: {
             type: dataTypes.STRING(100),
             allowNull: false
